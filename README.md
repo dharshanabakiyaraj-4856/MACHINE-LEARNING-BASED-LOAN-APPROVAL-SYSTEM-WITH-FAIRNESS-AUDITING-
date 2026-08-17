@@ -1,0 +1,2 @@
+# MACHINE-LEARNING-BASED-LOAN-APPROVAL-SYSTEM-WITH-FAIRNESS-AUDITING-
+# GitHub Description  Machine Learning-based Loan Approval System that automates loan eligibility prediction using applicant financial and demographic data. The system evaluates model performance and audits predictions for fairness across sensitive groups, helping identify bias and promote transparent, responsible, and equitable lending decisions.
