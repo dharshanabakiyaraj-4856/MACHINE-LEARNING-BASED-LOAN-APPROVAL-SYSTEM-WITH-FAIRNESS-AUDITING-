@@ -1,0 +1,45 @@
+# Central Configuration File for Bank Loan Approval System
+
+data:
+  train_path: "dataset/train.csv"
+  model_path: "model.pkl"
+  shap_summary_path: "shap_summary.png"
+  shap_waterfall_path: "shap_waterfall.png"
+
+banking:
+  default_annual_interest_rate: 9.5  # Percentage per annum
+  default_loan_term_months: 360      # Default tenure (30 years)
+
+model:
+  random_seed: 42
+  eval_metric: "AUC"
+  early_stopping_rounds: 60
+  catboost:
+    iterations: 600
+    learning_rate: 0.05
+    depth: 6
+    l2_leaf_reg: 3
+
+validation:
+  n_splits: 5
+  stratified: true
+
+optuna:
+  enabled: false          # Toggle Optuna hyperparameter tuning
+  n_trials: 20
+  timeout: 120            # Timeout in seconds
+
+fairness:
+  sensitive_attributes:
+    - "Gender"
+    - "Married"
+    - "Education"
+  intersectional_features:
+    - "Gender_Married"
+  threshold_optimizer:
+    metric: "demographic_parity"  # or "equalized_odds"
+    grid_size: 1000
+
+risk_scoring:
+  high_risk_max: 40
+  medium_risk_max: 70
