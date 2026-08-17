@@ -100,14 +100,14 @@ python main.py
 ## 📐 Banking Feature Formulas
 
 1. **Equated Monthly Installment (EMI)**:
-   $$EMI = P \times r \times \frac{(1+r)^n}{(1+r)^n - 1}$$
-   *where $P = \text{LoanAmount} \times 1000$, $r = \text{Annual Interest Rate} / 1200$, $n = \text{Loan\_Amount\_Term}$.*
+   $$EMI = P \\times r \\times \\frac{(1+r)^n}{(1+r)^n - 1}$$
+   *where $P = \\text{LoanAmount} \\times 1000$, $r = \\text{Annual Interest Rate} / 1200$, $n = \\text{Loan\\_Amount\\_Term}$.''
 2. **Debt-to-Income Ratio (DTI)**:
-   $$DTI = \frac{EMI}{\text{TotalIncome}}$$
+   $$DTI = \\frac{EMI}{\\text{TotalIncome}}$$
 3. **Loan-to-Annual-Income Ratio**:
-   $$\text{Loan\_To\_Income} = \frac{\text{LoanAmount} \times 1000}{\text{TotalIncome} \times 12}$$
+   $$\\text{Loan\\_To\\_Income} = \\frac{\\text{LoanAmount} \\times 1000}{\\text{TotalIncome} \\times 12}$$
 4. **Disposable Balance Income**:
-   $$\text{Balance\_Income} = \text{TotalIncome} - EMI$$
+   $$\\text{Balance\\_Income} = \\text{TotalIncome} - EMI$$
 
 ---
 
@@ -122,7 +122,7 @@ python main.py
 ## ⚖️ Fairness Auditing & Bias Mitigation
 
 The system evaluates:
-- **Demographic Parity Difference** ($DPD \le 0.10$ Target)
+- **Demographic Parity Difference** ($DPD \\le 0.10$ Target)
 - **Equal Opportunity Difference** ($EOD$ Target $0.00$)
 - **Equalized Odds Difference** ($EQD$ Target $0.00$)
 
